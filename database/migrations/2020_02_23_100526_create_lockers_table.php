@@ -14,9 +14,9 @@ class CreateLockersTable extends Migration
     public function up()
     {
         Schema::create('lockers', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id', true);
             $table->string('locker_code')->unique();
-            $table->boolval('available');
+            $table->boolean('available');
             $table->timestamps();
         });
     }
