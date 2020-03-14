@@ -15,6 +15,7 @@
                     @endif
                     <div class="content-center">
                       <a href="{{ route('member') }}" type="button" class="btn btn-info margin-button">Members Page</a>
+                      <a href="{{ route('transaction') }}" type="button" class="btn btn-info margin-button">Transactions Page</a>
                     </div>
                 </div>
             </div>
