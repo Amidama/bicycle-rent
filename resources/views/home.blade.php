@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <div class="content-center">
+                      <a href="{{ route('member') }}" type="button" class="btn btn-info margin-button">Members Page</a>
+                    </div>
                 </div>
             </div>
         </div>
