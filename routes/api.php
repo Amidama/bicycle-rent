@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/hardware/lock', 'HardwareController@lock')->name('hardware.lock');
+Route::post('/hardware/unlock', 'HardwareController@unlock')->name('hardware.unlock');

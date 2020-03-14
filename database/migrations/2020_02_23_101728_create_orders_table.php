@@ -18,7 +18,7 @@ class CreateOrdersTable extends Migration
             $table->integer('member_id')->unsigned();
             $table->integer('locker_id')->unsigned();
             $table->dateTime('started_at');
-            $table->dateTime('ended_at');
+            $table->dateTime('ended_at')->nullable();
             $table->timestamps();
         });
         Schema::table('orders', function($table) {
