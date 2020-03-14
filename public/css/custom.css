@@ -1,0 +1,12 @@
+.text-with-button {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+}
+.content-center {
+  justify-content: center;
+  display: flex;
+}
+
+.margin-button {
+  margin: 3px;
+}
