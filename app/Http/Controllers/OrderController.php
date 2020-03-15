@@ -16,7 +16,9 @@ class OrderController extends Controller
   
   public function delete(Request $request)
     {
-        Order::where('id', $request->id)->delete();
-        return redirect(route('transaction'));
+      $order = Order::where('id', $request->id);
+      Locker::where('id', $order->locker()->first()->id)->update([ 'available' => true]);
+      $order->delete();
+      return redirect(route('transaction'));
     }
 }
