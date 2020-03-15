@@ -16,6 +16,9 @@ class HardwareController extends Controller
     public function lock(Request $request)
     {
       try {
+        error_log("LOCK!!");
+        error_log($request->Hardware_id);
+        error_log($request->Uid);
         $locker = Locker::where('locker_code', $request->Hardware_id)->first();
         $member = Member::where('card_id', $request->Uid)->first();
 
@@ -48,6 +51,8 @@ class HardwareController extends Controller
     public function unlock(Request $request)
     {
       try {
+        error_log("UNLOCK!!");
+        error_log($request->Hardware_id);
         error_log($request->Uid);
         $locker = Locker::where('locker_code', $request->Hardware_id)->first();
         $member = Member::where('card_id', $request->Uid)->first();
