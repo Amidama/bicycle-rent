@@ -24,4 +24,4 @@ Route::get('/transactions', 'OrderController@index')->name('transaction');
 Route::post('/transaction/delte', 'OrderController@delete')->name('transaction.delete');
 Route::post('/member', 'MemberController@store')->name('member.store');
 Route::post('/member/update', 'MemberController@update')->name('member.update');
-Route::post('/member/delte', 'MemberController@delete')->name('member.delete');
+Route::post('/member/delete', 'MemberController@delete')->name('member.delete');
