@@ -22,8 +22,8 @@ class CreateOrdersTable extends Migration
             $table->timestamps();
         });
         Schema::table('orders', function($table) {
-            $table->foreign('member_id')->references('id')->on('members');
-            $table->foreign('locker_id')->references('id')->on('lockers');
+            $table->foreign('member_id')->references('id')->on('members')->onDelete('cascade');;
+            $table->foreign('locker_id')->references('id')->on('lockers')->onDelete('cascade');;
         });
     }
 
